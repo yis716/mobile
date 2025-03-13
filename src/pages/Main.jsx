@@ -51,7 +51,7 @@ function Main() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <section className='comPany'>
+      <section className='comPany sec'>
         <h3 className='hidden'>회사소개</h3>
         <div className='comHead'>
           <p>Company</p>
@@ -97,8 +97,19 @@ function Main() {
           </ul>
         </div>
       </section>
-      <section className='comPany'>
-
+      <section className='esg'>
+        <h3 className='hidden'>지속가능경영</h3>
+        <div className='esgHead sec'>
+          <p>Green Life Together!</p>
+          <p>더 나은 일상을 위해 가야할 길, 지속 가능한 경영</p>
+        </div>
+        <div>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
       </section>
     </>
   );

@@ -141,14 +141,19 @@ header .active {
 .visual .mySwiper1 .swiper-slide .swiperTxt p{
     color: #fff;
 }
-/* company영역 */
-.comPany{
+
+/* section 공통 */
+.sec{
     padding: 50px;
 }
-.comPany .comHead{
+.comPany .comHead,
+.esg .esgHead{
     text-align: center;
     margin-bottom: 50px;
 }
+
+
+/* company영역 */
 .comPany .comHead p:nth-of-type(1){
     font-size: 3rem;
     font-weight: 700;
@@ -202,6 +207,18 @@ header .active {
     font-weight: 700;
     font-family: 'Roboto', sans-serif; 
 }
+/* esg영역 */
+.esg .esgHead p:nth-of-type(1){
+    font-size: 3rem;
+    font-weight: 700;
+    color: #99CC00;
+    margin-bottom: 15px;
+}
+.esg .esgHead p:nth-of-type(2){
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
 /* 푸터영역 */
 footer {
     background: pink;
