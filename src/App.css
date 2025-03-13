@@ -1,0 +1,234 @@
+/* 
+   font-family: 'Roboto', sans-serif; 
+   font-family: "Noto Sans KR", sans-serif;
+*/
+
+header {
+    background: skyblue;
+}
+
+#content {
+    background: #fff;
+    height: auto;
+    margin-top: 71px;
+}
+
+footer {
+    background: pink;
+}
+
+/* 헤더영역 */
+header {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    height: 71px;
+    top: 0;
+    z-index: 100;
+    /* border-bottom: 1px solid #000; */
+}
+
+header h1 {
+    width: 180px;
+    /* margin: 10px 0 10px 10px; */
+}
+header .header_inner{
+    padding: 10px 0 10px 10px;
+}
+header h1 img {
+    width: 100%;
+}
+header .header_inner .navBg.show{
+    width: 100%;
+    height: 100vh;
+    background: rgba(217, 217, 217, .7);
+}
+header .header_inner nav {
+    width: 70%;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 71px;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+header .header_inner nav.show {
+    height: 100vh;
+}
+
+header .header_inner nav.hide {
+    height: 0;
+}
+
+/* header .header_inner.show .navBg{
+    display: block;
+} */
+header .header_inner nav ul li {
+    width: 100%;
+    text-align: center;
+}
+
+header .header_inner nav ul li a {
+    padding: 10px 0;
+    transition: all .5s;
+}
+
+header .header_inner nav ul li a:hover {
+    background: #fff;
+    color: orange;
+    font-weight: bold;
+}
+
+header button {
+    position: absolute;
+    right: 20px;
+    top: 19px;
+    cursor: pointer;
+    background: none;
+}
+
+header button .ico {
+    font-size: 2.5rem;
+}
+
+header .active {
+    color: orange;
+}
+
+/* visual */
+.visual {
+    height: 950px;
+}
+
+.swiper-container {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-container .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.swiper-container img {
+    width: 100%;
+}
+.visual .mySwiper1 .swiper-slide div{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;    
+    width: 100%;
+}
+
+.visual .mySwiper1 .swiper-slide div p{
+    font-size: 1.5rem;
+    font-weight: 500;  
+}
+.visual .mySwiper1 .swiper-slide div p span:nth-of-type(1){ 
+    color: #0071BB;
+}
+.visual .mySwiper1 .swiper-slide div p span:nth-of-type(2){ 
+    color: #807F83;
+}
+
+.visual .mySwiper1 .swiper-slide .swiperTxt p{
+    color: #fff;
+}
+/* company영역 */
+.comPany{
+    padding: 50px;
+}
+.comPany .comHead{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.comPany .comHead p:nth-of-type(1){
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3366CC;
+    margin-bottom: 15px;
+}
+.comPany .comHead p:nth-of-type(2){
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.comPany .comBot ul{
+    display: flex;
+    justify-content: space-between;
+}
+.comPany .comBot .bottom1,
+.comPany .comBot .bottom2{
+    position: relative;
+}
+.comPany .comBot .bottom1::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 210px;
+    background: #ccc;
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+.comPany .comBot .bottom2::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 210px;
+    background: #ccc;
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+.comPany .comBot ul li dl{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.comPany .comBot img{
+    width: 60px;
+}
+.comPany .comBot dt span{
+    display: block;
+    padding-top: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif; 
+}
+/* 푸터영역 */
+footer {
+    background: pink;
+}
+
+footer .top_move {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background: skyblue;
+    color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    opacity: 0;
+    transition: all .5s;
+}
+
+footer .top_move.up {
+    opacity: 0;
+}
+
+footer .top_move.down {
+    opacity: 1;
+}
+
+
