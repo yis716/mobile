@@ -1,11 +1,12 @@
 import React from 'react';
 import '../App.css';
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Autoplay } from "swiper";
+import SwiperCore, { Pagination, Autoplay, Navigation, EffectCoverflow } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
+
 
 
 function getImgUrl(url, name, ext) {
@@ -14,7 +15,7 @@ function getImgUrl(url, name, ext) {
 
 function Main() {
 
-  SwiperCore.use([Pagination, Autoplay]);
+  SwiperCore.use([Pagination, Autoplay, Navigation, EffectCoverflow]);
 
   return (
     <>
@@ -96,19 +97,144 @@ function Main() {
             </li>
           </ul>
         </div>
+        <div className='more'>
+          <a href='/'>한 눈에 보러가기
+            <span class="material-symbols-outlined">
+              arrow_forward
+            </span>
+          </a>
+        </div>
       </section>
-      <section className='esg'>
+      <section className='esg sec'>
         <h3 className='hidden'>지속가능경영</h3>
-        <div className='esgHead sec'>
+        <div className='esgHead'>
           <p>Green Life Together!</p>
           <p>더 나은 일상을 위해 가야할 길, 지속 가능한 경영</p>
         </div>
-        <div>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+        <Swiper 
+          loop={true}
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={'auto'}  
+          spaceBetween={0}
+          coverflowEffect={{
+            rotate: -15,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          pagination={{ clickable: true }} 
+          modules={[EffectCoverflow, Pagination]}
+          className="mySwiper2" >
+          <SwiperSlide>
+            <img src={getImgUrl('/images', 'esg1', 'jpg')} alt="esg1이미지" />
+            <div className='swiperTxt2'>
+              <p>Environmental</p>
+              <p>지구를 지키기 위한 노력</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={getImgUrl('/images', 'esg2', 'jpg')} alt="esg2이미지" />
+            <div className='swiperTxt2'>
+              <p>Social</p>
+              <p>함께하는 세상을 위해 사회와 동행</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={getImgUrl('/images', 'esg3', 'jpg')} alt="esg3이미지" />
+            <div className='swiperTxt2'>
+              <p>Governance</p>
+              <p>정직하고 투명한 미래 경영</p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        <div className='more'>
+          <a href='/'>한 눈에 보러가기
+            <span class="material-symbols-outlined">
+              arrow_forward
+            </span>
+          </a>
+        </div>
+      </section>
+      <section className='buisNess'>
+        <h3 className='hidden'>사업소개</h3>
+        <div className='buisHead'>
+          <p>Buisness Introduction</p>
+        </div>
+        <div className='buisCon'>
+          <Swiper 
+            loop={true}
+            slidesPerView={1}  
+            // pagination={{ clickable: true }}
+            navigation={{ clickable: true }}
+            className="mySwiper3" >
+            <SwiperSlide>
+              <img src={getImgUrl('/images', 'business1', 'jpg')} alt="esg1이미지" />
+              <div className='swiperTxt3 gs25'>
+                <p><span className='inner1'>GS</span><span className='inner2'>25</span></p>
+                <p>
+                  일상생활의 중심, 하루의 시작<br/>
+                  <span>재미있는 Lifestyle Platform GS25</span>
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={getImgUrl('/images', 'business2', 'jpg')} alt="esg2이미지" />
+              <div className='swiperTxt3 fresh'>
+                <p>GS THE FRESH</p>
+                <p>
+                  신선한 행복을 주는 브랜드 <span>GS THE FRESH</span>
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={getImgUrl('/images', 'business3', 'jpg')} alt="esg3이미지" />
+              <div className='swiperTxt3 shop'>
+                <p>GS SH<span>O</span>P</p>
+                <p>
+                  고객의 모든 순간을 가치 있게 만드는<br/>
+                  Designing Life Together
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={getImgUrl('/images', 'business4', 'jpg')} alt="esg3이미지" />
+              <div className='swiperTxt3 pay'>
+                <p>GS Pa<span>y</span></p>
+                <p>
+                  쉽고 간편하게, 오직 GS Pay로 산다!<br/>
+                  안전하고 빠르게!
+                </p>
+              </div>
+            </SwiperSlide>
+          </Swiper>          
+        </div>
+        <div className='more'>
+            <a href='/'>한 눈에 보러가기
+              <span class="material-symbols-outlined">
+                arrow_forward
+              </span>
+            </a>
+          </div>
+      </section>
+      <section className='carRer'>
+        <h3 className='hidden'>채용공고</h3>
+        <div className='carHead'>
+          <p>Grow With us</p>
+          <p>함께하는 내일, 여러분과의 성장을 기다립니다.</p>
+        </div>
+        <div className='carCon'>
+          <div className='carInner'>
+            <div className='more'>
+              <a href='/'>채용공고 바로가기
+                <span class="material-symbols-outlined">
+                  arrow_outward
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>

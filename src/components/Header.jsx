@@ -19,7 +19,7 @@ function Header() {
         <header>
             <div className="header_inner">
                 <h1><NavLink to="/" ><img src={img1} alt="로고명" /></NavLink></h1>
-                {/* <div className={'navBg' + (isSwitched ? 'show' : 'hide')}></div> */}
+                {/* <div className={'navBg' + (isSwitched ? 'show' : 'hide')} onClick={closeHandler}></div>     */}
                 <nav className={isSwitched ? 'show' : 'hide'} onClick={closeHandler}>
                     
                     <ul>
